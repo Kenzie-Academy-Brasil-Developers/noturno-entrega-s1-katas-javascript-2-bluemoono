@@ -1,5 +1,5 @@
 // comece a criar a sua função add na linha abaixo
-function add(a, b){
+/*function add(a, b){
     let soma = a+b
     return soma
 }
@@ -37,11 +37,12 @@ function power(x,n){
 
 // comece a criar a sua função factorial na linha abaixo
 function factorial(a){
-    let f=1
+    let f=a
+    let r =f
     for (let index = 1; index < a; index++) {
-        f = power(index, index--)
+        r *= index
     }
-    return f
+    return r
 }
 // descomente a linha seguinte para testar sua função
 console.log(factorial(5))
@@ -53,7 +54,19 @@ console.assert(factorial(5) === 120, 'A função factorial não está funcionand
  */
 
 // crie a função fibonacci
+function fibonacci(q){
+    let n1 = 0
+    let n2 = 1
+    let r = null
 
+    for (let index = 1; index < q; index++) {
+        r = n1 + n2
+        n1 = n2
+        n2 = r
+    }
+    return n1
+}
 
 // descomente a linha seguinte para testar sua função
-// console.assert(fibonacci(8) === 13, 'A função fibonacci não está funcionando como esperado');
+console.log(fibonacci(8))
+console.assert(fibonacci(8) === 13, 'A função fibonacci não está funcionando como esperado');
